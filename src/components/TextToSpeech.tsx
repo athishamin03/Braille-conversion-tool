@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
 interface TextToSpeechProps {
-  text: string; // Accept the text prop from parent component
+  text: string;
 }
 
 const TextToSpeech: React.FC<TextToSpeechProps> = ({ text }) => {
-  const [isSpeaking, setIsSpeaking] = useState<boolean>(false); // flag to indicate if speech is playing
+  const [isSpeaking, setIsSpeaking] = useState<boolean>(false); 
 
-  // Convert text to speech using the SpeechSynthesis API
+
   const convertTextToSpeech = () => {
     if (!text.trim()) return; // Don't do anything if the text is empty or just spaces
 
@@ -39,12 +39,6 @@ const TextToSpeech: React.FC<TextToSpeechProps> = ({ text }) => {
       <button
         onClick={convertTextToSpeech}
         disabled={isSpeaking || !text}
-        // className={`px-8 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl 
-        //   hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 font-semibold text-lg
-        //   focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:outline-none
-        //   disabled:opacity-70 disabled:cursor-not-allowed transform hover:-translate-y-0.5
-        //   active:translate-y-0 shadow-lg hover:shadow-xl
-        //   ${isSpeaking ? 'bg-blue-400' : ''}`}
         className={`px-8 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl 
             hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 font-semibold text-lg
             focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:outline-none
