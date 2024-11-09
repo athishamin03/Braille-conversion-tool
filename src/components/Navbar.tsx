@@ -19,7 +19,7 @@ export function Navbar({ theme, onThemeToggle }: NavbarProps) {
         </h1>
         <div className="flex gap-3">
           <a
-            href="https://github.com/yourusername/braille-translator"
+            href="https://github.com/athishamin03/Braille-conversion-tool.git"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="View source on GitHub"
